@@ -1,7 +1,9 @@
+<font size="+1.5">
+
 # About me
 
 <img align="left" width="310" height="300" src="resources/abzdel.png" style="float: left; margin-right: 10px;" >
-<font size="+1.5">
+
 <p>
 I'm currently finishing up my MS in Computer Engineering at Duke University, where I've gained a deep understanding of the underlying principles of computer systems, algorithms, and machine learning. I'm an aspiring ML engineer and make a point to spend time every day perfecting my craft and learning about where the industry is going.
 

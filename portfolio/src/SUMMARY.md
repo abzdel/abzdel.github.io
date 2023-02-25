@@ -1,5 +1,7 @@
+<font size="+1.5">
+
 # Summary
 
--[An overview of my favorite projects]()
-- [About me](./aboutme.md)
+- [Project Overview](./projectsummary.md)
+- [About Me](./aboutme.md)
 - [LA Clippers Internship](./clippers.md)

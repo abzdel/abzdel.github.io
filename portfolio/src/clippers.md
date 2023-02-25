@@ -2,7 +2,9 @@
      style="float: left; margin-right: 10px;" 
      width = "510"
      height = "490"/>
+
  <font size="+1.5">
+ 
 <p>During my time with the Clippers, I worked on various machine learning and analytics projects. Two of my most prevalent are listed below:
 
 - **Season Ticket Holder Objections**: I analyzed call transcripts from season ticket holders to identify common objections raised by customers. By carefully reviewing these transcripts and using text analytics methods, I was able to uncover recurring themes and patterns in these transcripts. This allowed me to provide valuable insights to the company and make recommendations for improving customer satisfaction and retention.
