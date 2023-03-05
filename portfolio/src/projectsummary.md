@@ -3,15 +3,9 @@
 Below, I'll list some of my favorite projects I've had the opportunity to work on. Most projects have an associated demo showing how all the moving pieces work together. I'll also place a link to each repo in case you'd like to take a deeper look!
 
 ## Summarize CLI - a Hugging Face and AWS Sagemaker tool
-A command line tool that takes a Hugging Face summarizer model ([pegasus-xsum](https://huggingface.co/google/pegasus-xsum) by default), deploys it to AWS Sagemaker, and queries it for inference. I made this tool utilizing Python, Bash, and a cool program named [Bashly](https://bashly.dannyb.co/) to help me develop the CLI arguments and flags. In the future, I'd like to add more functionality to use custom models and send multiple queries at once for longer texts.
+A command line tool that takes a Hugging Face summarizer model ([pegasus-xsum](https://huggingface.co/google/pegasus-xsum) by default), deploys it to AWS Sagemaker, and queries it for inference. I made this tool utilizing Python, Bash, and a cool program named [Bashly](https://bashly.dannyb.co/) to help me develop the CLI arguments and flags. At the moment, the project does not have a complete README, demo, or proper automation as I am still adding more functionality before I consider it "complete". Nonetheless, the link to the repo is below.
 
 [Link to the project](https://github.com/nogibjj/Summarize-CLI)
-
-**Demo:**
-
-<iframe width="640" height="385"
-src="https://www.youtube.com/embed/tRXR8zne2Q0">
-</iframe>
 
 <br>
 
@@ -46,9 +40,3 @@ For my image & video processing course at Duke, my teammates and I used multi-Ot
 
 
 <iframe src="https://drive.google.com/file/d/1OlW61qlPdmpENmfDZAYqmE5SPRN4SOdT/preview" width="640" height="480" allow="autoplay"></iframe>
-
-
-## Estimating the Impact of Opioid Control Policies
-Along with a small group, I analyzed opioid-related policies across various states to determine whether they had an impact on both the prescription rates and overdose rates of opioids. This project includes a [PowerPoint presentation](https://github.com/abzdel/Opioid-Analysis/blob/main/30_results/Presentation_Opioid%20Control.pptx) going over our findings in a more succinct way.
-
-[Link to the project](https://github.com/abzdel/Opioid-Analysis)
