@@ -7,6 +7,9 @@ build:
 serve:
 	mdbook serve -p 8000 -n 127.0.0.1 portfolio 
 
+clean:
+	mdbook clean portfolio
+
 format:
 	#cargo fmt --quiet #portfolio/book.toml
 	echo not yet implemented
