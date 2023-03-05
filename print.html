@@ -1,0 +1,242 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Alex Bzdel - Portfolio</title>
+        <meta name="robots" content="noindex" />
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="projectsummary.html"><strong aria-hidden="true">1.</strong> Project Overview</a></li><li class="chapter-item expanded "><a href="aboutme.html"><strong aria-hidden="true">2.</strong> About Me</a></li><li class="chapter-item expanded "><a href="clippers.html"><strong aria-hidden="true">3.</strong> LA Clippers Internship</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Alex Bzdel - Portfolio</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="projects-summary"><a class="header" href="#projects-summary">Projects Summary</a></h1>
+<p>Below, I'll list some of my favorite projects I've had the opportunity to work on. Most projects have an associated demo showing how all the moving pieces work together. I'll also place a link to each repo in case you'd like to take a deeper look!</p>
+<h2 id="summarize-cli---a-hugging-face-and-aws-sagemaker-tool"><a class="header" href="#summarize-cli---a-hugging-face-and-aws-sagemaker-tool">Summarize CLI - a Hugging Face and AWS Sagemaker tool</a></h2>
+<p>A command line tool that takes a Hugging Face summarizer model (<a href="https://huggingface.co/google/pegasus-xsum">pegasus-xsum</a> by default), deploys it to AWS Sagemaker, and queries it for inference. I made this tool utilizing Python, Bash, and a cool program named <a href="https://bashly.dannyb.co/">Bashly</a> to help me develop the CLI arguments and flags. At the moment, the project does not have a complete README, demo, or proper automation as I am still adding more functionality before I consider it &quot;complete&quot;. Nonetheless, the link to the repo is below.</p>
+<p><a href="https://github.com/nogibjj/Summarize-CLI">Link to the project</a></p>
+<br>
+<h2 id="nba-overunder-prediction-app"><a class="header" href="#nba-overunder-prediction-app">NBA Over/Under Prediction App</a></h2>
+<p>Streamlit app that automatically pulls newest data, predicts on it, and serves betting predictions to the user. Utilizes GitHub Actions for continuous integration and continuous delivery to AWS EC2. For this project, I used Python and a fairly simple Sci-kit Learn linear regression model (emphasis was more on the CI/CD than model tuning).</p>
+<p><a href="https://github.com/abzdel/NBA_Over_Under_Prediction_App">Link to the project</a></p>
+<p><strong>Demo:</strong></p>
+<iframe width="640" height="385"
+src="https://www.youtube.com/embed/x3TN3ZFBzu8">
+</iframe>
+<br>
+<h2 id="machine-learning-api"><a class="header" href="#machine-learning-api">Machine Learning API</a></h2>
+<p>FastAPI application that predicts Jayson Tatum's points per game based on continuously updated data from ESPN. Deploys automatically to AWS AppRunner.</p>
+<p><a href="https://github.com/abzdel/ML_API_on_AWS">Link to the project</a></p>
+<p><strong>Demo:</strong></p>
+<iframe width="640" height="385"
+src="https://www.youtube.com/embed/RRpDN-AFYsE">
+</iframe>
+<br>
+<h2 id="finding-traumatic-brain-injury-in-ct-scans"><a class="header" href="#finding-traumatic-brain-injury-in-ct-scans">Finding Traumatic Brain Injury in CT Scans</a></h2>
+<p>For my image &amp; video processing course at Duke, my teammates and I used multi-Otsu thresholding to segment potential instances of TBI from brain CT scans. This involved a variety of preprocessing steps to ensure consistency as well as researching and testing both machine learning methods and other segmentation methods to find an optimal solution.</p>
+<iframe src="https://drive.google.com/file/d/1OlW61qlPdmpENmfDZAYqmE5SPRN4SOdT/preview" width="640" height="480" allow="autoplay"></iframe>
+<div style="break-before: page; page-break-before: always;"></div><font size="+1.5">
+<h1 id="about-me"><a class="header" href="#about-me">About me</a></h1>
+<img align="left" width="310" height="300" src="resources/abzdel.png" style="float: left; margin-right: 10px;" >
+<p>
+I'm currently finishing up my MS in Computer Engineering at Duke University, where I've gained a deep understanding of the underlying principles of computer systems, algorithms, and machine learning. I'm an aspiring ML engineer and make a point to spend time every day perfecting my craft and learning about advancements in the industry.
+<p>Throughout my academic career, I have focused on developing my skills in data analysis, machine learning, and DevOps/automation. I've worked on numerous projects exploring the intersection of these interests, which I hope to demonstrate through this portfolio. My expertise includes training, evaluating, and deploying machine learning models and completing end-to-end data science projects.</p>
+<p>In addition to my academic pursuits, I've gained practical experience through my internship with the LA Clippers doing data analytics work (summers 2021 &amp; 2022). You can read more about my time with the Clippers <a href="./clippers.html">here</a>.</p>
+<p>As a dedicated and detail-oriented engineer, I'm committed to delivering high-quality solutions to complex problems. I'm passionate about using my skills to advance the field of machine learning and contribute to the development of new and innovative technologies.</p>
+<p>In my free time, I enjoy keeping up with the latest developments in machine learning and attending industry events and conferences. I'm also somewhat of a basketball fanatic and find it to be a fascinating space for the application of ML. I'm excited about the opportunities that lie ahead and look forward to making a meaningful impact as a machine learning practitioner.</p>
+<h2 id="undergraduate-studies"><a class="header" href="#undergraduate-studies">Undergraduate Studies</a></h2>
+<p>I started my undergraduate degree at Lasell University as a business major and a part of the <a href="https://laserpride.lasell.edu/sports/mbkb/2017-18/roster">men's basketball team</a>. During my second semester, I took an introductory computing class and absolutely fell in love with the field of computer science. I then knew I wanted programming and analytics to be part of my career. I later transferred to Bryant University where I received a Bachelor's degree in data science with minors in business administration and mathematics. Outside of academics, I was part of the <a href="https://www.bryantbulldogs.com/sports/club/Ultimate/Roster/2019-2020">men's ultimate frisbee team</a> and helped establish the <a href="https://www.bryantbulldogs.com/sports/club/MBasketball/index">school's first club basketball team</a>.</p>
+</p><div style="break-before: page; page-break-before: always;"></div><p><img src="resources/la.jpg"
+     style="float: left; margin-right: 10px;" 
+     width = "510"
+     height = "490"/></p>
+<font size="+1.5">
+<p>During my time with the Clippers, I worked on various machine learning and analytics projects. Two of my most prevalent are listed below:
+<ul>
+<li>
+<p><strong>Season Ticket Holder Objections</strong>: I analyzed call transcripts from season ticket holders to identify common objections raised by customers. By carefully reviewing these transcripts and using text analytics methods, I was able to uncover recurring themes and patterns. This allowed me to provide valuable insights to the company and make recommendations for improving customer satisfaction and retention.</p>
+</li>
+<li>
+<p><strong>Attendance Predictions &amp; Key Variables</strong>: In this project, I deployed machine learning models to analyze key variables that impact attendance at Clippers games. By utilizing data from various sources and employing advanced machine learning techniques, I was able to uncover important insights and patterns in attendance behavior. This information helped the company make data-driven decisions on how to improve attendance rates and optimize their operations.</p>
+</li>
+</ul>
+<p>Additionally, I worked on various ad-hoc requests and foundational analytics projects. The main analytics project I worked on during my first summer with the Clippers was in regards to <strong>developing a new ticketing model</strong> for the Intuit Dome - the Clippers' new stadium opening in Inglewood for the 2024-25 NBA Season. My team and I proposed a <em>subscription-based</em> ticketing model that would aim to improve the fan experience and reach a wider target market than we previously had been.</p>
+<p>I'm proud to say that the subscription-based model will be implemented for the Clippers' first season in the Intuit Dome! By targeting a specific demographic and opening up this opportunity for fans to attend games, we hope to see an increase in Clipper spirit as well as a $1-2 million increase during the first year of implementation.</p></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+    </div>
+    </body>
+</html>
