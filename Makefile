@@ -36,10 +36,12 @@ deploy:
 	#install mdbook if not installed
 	if [ ! -x "$(command -v mdbook)" ]; then cargo install mdbook; fi
 	@echo "====> deploying to github"
+
 	# if worktree exists, remove it: git worktree remove --force /tmp/book
 	# otherwise add it: git worktree add /tmp/book gh-pages
 	if [ -d /tmp/book ]; then git worktree remove --force /tmp/book; fi
-	#git worktree add --force /tmp/book gh-pages # solved fatal error on this line by running 'git branch gh-pages' to create branch
+
+	git worktree add --force /tmp/book gh-pages # solved fatal error on this line by running 'git branch gh-pages' to create branch
 	mdbook build portfolio
 	rm -rf /tmp/book/*
 	cp -rp portfolio/book/* /tmp/book/
