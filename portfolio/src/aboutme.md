@@ -1,5 +1,7 @@
 <font size="+1.5">
 
+*Refer to the navigation bar on the left to see any of my portolfio pages. To go directly to my projects, click [here](./projectsummary.md)*
+
 # About me
 
 <img align="left" width="310" height="300" src="resources/abzdel.png" style="float: left; margin-right: 10px;" >

@@ -2,6 +2,6 @@
 
 # Summary
 
-- [Project Overview](./projectsummary.md)
 - [About Me](./aboutme.md)
+- [Project Overview](./projectsummary.md)
 - [LA Clippers Internship](./clippers.md)
