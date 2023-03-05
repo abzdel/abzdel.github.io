@@ -1,6 +1,6 @@
 <font size="+1.5">
 
-*Refer to the navigation bar on the left to see any of my portolfio pages. To go directly to my projects, click [here](./projectsummary.md)*
+*Refer to the navigation bar on the left to see any of my portolfio pages. To go directly to my projects, click [here](./projects.md)*
 
 # About me
 
