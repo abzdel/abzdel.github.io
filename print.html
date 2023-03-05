@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Alex Bzdel - Portfolio</title>
+        <title>portfolio</title>
         <meta name="robots" content="noindex" />
 
 
@@ -71,10 +71,12 @@
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
             var html = document.querySelector('html');
-            var sidebar = 'hidden';
+            var sidebar = null;
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
             }
             html.classList.remove('sidebar-visible');
             html.classList.add("sidebar-" + sidebar);
@@ -111,7 +113,7 @@
                         </button>
                     </div>
 
-                    <h1 class="menu-title">Alex Bzdel - Portfolio</h1>
+                    <h1 class="menu-title">portfolio</h1>
 
                     <div class="right-buttons">
                         <a href="print.html" title="Print this book" aria-label="Print this book">
@@ -146,8 +148,12 @@
                         <h1 id="projects-summary"><a class="header" href="#projects-summary">Projects Summary</a></h1>
 <p>Below, I'll list some of my favorite projects I've had the opportunity to work on. Most projects have an associated demo showing how all the moving pieces work together. I'll also place a link to each repo in case you'd like to take a deeper look!</p>
 <h2 id="summarize-cli---a-hugging-face-and-aws-sagemaker-tool"><a class="header" href="#summarize-cli---a-hugging-face-and-aws-sagemaker-tool">Summarize CLI - a Hugging Face and AWS Sagemaker tool</a></h2>
-<p>A command line tool that takes a Hugging Face summarizer model (<a href="https://huggingface.co/google/pegasus-xsum">pegasus-xsum</a> by default), deploys it to AWS Sagemaker, and queries it for inference. I made this tool utilizing Python, Bash, and a cool program named <a href="https://bashly.dannyb.co/">Bashly</a> to help me develop the CLI arguments and flags. At the moment, the project does not have a complete README, demo, or proper automation as I am still adding more functionality before I consider it &quot;complete&quot;. Nonetheless, the link to the repo is below.</p>
+<p>A command line tool that takes a Hugging Face summarizer model (<a href="https://huggingface.co/google/pegasus-xsum">pegasus-xsum</a> by default), deploys it to AWS Sagemaker, and queries it for inference. I made this tool utilizing Python, Bash, and a cool program named <a href="https://bashly.dannyb.co/">Bashly</a> to help me develop the CLI arguments and flags. In the future, I'd like to add more functionality to use custom models and send multiple queries at once for longer texts.</p>
 <p><a href="https://github.com/nogibjj/Summarize-CLI">Link to the project</a></p>
+<p><strong>Demo:</strong></p>
+<iframe width="640" height="385"
+src="https://www.youtube.com/embed/tRXR8zne2Q0">
+</iframe>
 <br>
 <h2 id="nba-overunder-prediction-app"><a class="header" href="#nba-overunder-prediction-app">NBA Over/Under Prediction App</a></h2>
 <p>Streamlit app that automatically pulls newest data, predicts on it, and serves betting predictions to the user. Utilizes GitHub Actions for continuous integration and continuous delivery to AWS EC2. For this project, I used Python and a fairly simple Sci-kit Learn linear regression model (emphasis was more on the CI/CD than model tuning).</p>
@@ -168,6 +174,9 @@ src="https://www.youtube.com/embed/RRpDN-AFYsE">
 <h2 id="finding-traumatic-brain-injury-in-ct-scans"><a class="header" href="#finding-traumatic-brain-injury-in-ct-scans">Finding Traumatic Brain Injury in CT Scans</a></h2>
 <p>For my image &amp; video processing course at Duke, my teammates and I used multi-Otsu thresholding to segment potential instances of TBI from brain CT scans. This involved a variety of preprocessing steps to ensure consistency as well as researching and testing both machine learning methods and other segmentation methods to find an optimal solution.</p>
 <iframe src="https://drive.google.com/file/d/1OlW61qlPdmpENmfDZAYqmE5SPRN4SOdT/preview" width="640" height="480" allow="autoplay"></iframe>
+<h2 id="estimating-the-impact-of-opioid-control-policies"><a class="header" href="#estimating-the-impact-of-opioid-control-policies">Estimating the Impact of Opioid Control Policies</a></h2>
+<p>Along with a small group, I analyzed opioid-related policies across various states to determine whether they had an impact on both the prescription rates and overdose rates of opioids. This project includes a <a href="https://github.com/abzdel/Opioid-Analysis/blob/main/30_results/Presentation_Opioid%20Control.pptx">PowerPoint presentation</a> going over our findings in a more succinct way.</p>
+<p><a href="https://github.com/abzdel/Opioid-Analysis">Link to the project</a></p>
 <div style="break-before: page; page-break-before: always;"></div><font size="+1.5">
 <h1 id="about-me"><a class="header" href="#about-me">About me</a></h1>
 <img align="left" width="310" height="300" src="resources/abzdel.png" style="float: left; margin-right: 10px;" >
