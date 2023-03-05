@@ -32,6 +32,10 @@ release:
 	echo not yet implemented
 
 deploy:
+	# delete current worktree attached to tmp/book and delete gh-pages branch
+	#git worktree remove --force /tmp/book
+	#git branch -D gh-pages
+
 	#if git is not configured, configure it
 	if [ -z "$(git config --global user.email)" ]; then git config --global user.email "abzdel25@gmail.com" &&\
 		 git config --global user.name "Alex Bzdel"; fi
