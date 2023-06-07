@@ -1,13 +1,13 @@
 <font size="+1.5">
 
-*Refer to the navigation bar on the left to see any of my portolfio pages. To go directly to my projects, click [here](./projects.md)*
+*To go directly to my projects, click [here](./projects.md). Refer to the navigation bar on the left to see any of my portolfio pages!*
 
 # About me
 
 <img align="left" width="310" height="300" src="resources/abzdel.png" style="float: left; margin-right: 10px;" >
 
 <p>
-I'm currently finishing up my MS in Computer Engineering at Duke University, where I've gained a deep understanding of the underlying principles of computer systems, algorithms, and machine learning. I'm an aspiring ML engineer and make a point to spend time every day perfecting my craft and learning about advancements in the industry.
+I recently finished up my MS in Computer Engineering at Duke University, where I gained a deep understanding of the underlying principles of computer systems, algorithms, and machine learning. I'm an aspiring ML engineer and make a point to spend time every day perfecting my craft and learning about advancements in the industry.
 
 Throughout my academic career, I have focused on developing my skills in data analysis, machine learning, and DevOps/automation. I've worked on numerous projects exploring the intersection of these interests, which I hope to demonstrate through this portfolio. My expertise includes training, evaluating, and deploying machine learning models and completing end-to-end data science projects.
 
