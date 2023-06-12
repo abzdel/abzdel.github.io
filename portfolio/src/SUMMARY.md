@@ -5,3 +5,4 @@
 - [About Me](./aboutme.md)
 - [Project Overview](./projects.md)
 - [LA Clippers Internship](./clippers.md)
+- [Rust Miniprojects](./rust_miniprojects.md)
