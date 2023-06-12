@@ -84,7 +84,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="aboutme.html"><strong aria-hidden="true">1.</strong> About Me</a></li><li class="chapter-item expanded "><a href="projects.html"><strong aria-hidden="true">2.</strong> Project Overview</a></li><li class="chapter-item expanded "><a href="clippers.html"><strong aria-hidden="true">3.</strong> LA Clippers Internship</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="aboutme.html"><strong aria-hidden="true">1.</strong> About Me</a></li><li class="chapter-item expanded "><a href="projects.html"><strong aria-hidden="true">2.</strong> Project Overview</a></li><li class="chapter-item expanded "><a href="clippers.html"><strong aria-hidden="true">3.</strong> LA Clippers Internship</a></li><li class="chapter-item expanded "><a href="rust_miniprojects.html"><strong aria-hidden="true">4.</strong> Rust Miniprojects</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -159,9 +159,26 @@ I recently finished up my MS in Computer Engineering at Duke University, where I
 <p>I started my undergraduate degree at Lasell University as a business major and a part of the <a href="https://laserpride.lasell.edu/sports/mbkb/2017-18/roster">men's basketball team</a>. During my second semester, I took an introductory computing class and absolutely fell in love with the field of computer science. I then knew I wanted programming and analytics to be part of my career. I later transferred to Bryant University where I received a Bachelor's degree in data science with minors in business administration and mathematics. Outside of academics, I was part of the <a href="https://www.bryantbulldogs.com/sports/club/Ultimate/Roster/2019-2020">men's ultimate frisbee team</a> and helped establish the <a href="https://www.bryantbulldogs.com/sports/club/MBasketball/index">school's first club basketball team</a>.</p>
 </p><div style="break-before: page; page-break-before: always;"></div><h1 id="projects-summary"><a class="header" href="#projects-summary">Projects Summary</a></h1>
 <p>Below, I'll list some of my favorite projects I've had the opportunity to work on. Most projects have an associated demo showing how all the moving pieces work together. I'll also place a link to each repo in case you'd like to take a deeper look!</p>
+<h2 id="image-classifier-web-app"><a class="header" href="#image-classifier-web-app">Image Classifier Web App</a></h2>
+<p>This is a web application that allows users to upload an image and receive a classification prediction for that image using a pre-trained deep learning model. The application uses Flask as the backend framework, which invokes an AWS Lambda function to make requests to a pre-deployed Amazon SageMaker endpoint for image classification. The predicted labels are then returned to the user and displayed on the web page.</p>
+<p><a href="https://github.com/abzdel/image-classifier-web-app">Link to the project</a></p>
+<p><strong>Demo:</strong></p>
+<iframe width="640" height="385"
+src="https://www.youtube.com/embed/8fJlxViFTqs">
+</iframe>
+<br>
+<h2 id="improving-student-course-feedback-through-eeg-brain-signal-models"><a class="header" href="#improving-student-course-feedback-through-eeg-brain-signal-models">Improving Student Course Feedback through EEG Brain Signal Models</a></h2>
+<p>Our research focused on addressing the challenge of obtaining feedback on lesson clarity in online learning platforms. We built upon previous work by graduate student researchers at Carnegie Mellon University who designed a classifier using an EEG headset recorder device to detect student confusion.</p>
+<p>Our objective was to <em>reproduce and enhance their results</em> by implementing <strong>a more rigorous model selection process, feature selection, scaling, and hyperparameter optimization using grid search cross-validation.</strong> Through these methods, we <strong>increased model performance by 27%</strong> and included an analysis to ensure our results were generalizable.</p>
+<p><a href="https://github.com/abzdel/BCI-EEG-Classification">Link to the project</a> <br>
+<em>this project does not have a demo, <a href="https://github.com/abzdel/BCI-EEG-Classification/tree/main/reports">but the slides and report can be found here</a>.</em></p>
+<div style="display: flex; align-items: center;">
+    <img align="left" width="550" height="480" src="resources/eeg_project.png" style="margin-right: 10px;">
+</div>
+<br>
 <h2 id="summarize-cli---a-hugging-face-and-aws-sagemaker-tool"><a class="header" href="#summarize-cli---a-hugging-face-and-aws-sagemaker-tool">Summarize CLI - a Hugging Face and AWS Sagemaker tool</a></h2>
 <p>A command line tool that takes a Hugging Face summarizer model (<a href="https://huggingface.co/google/pegasus-xsum">pegasus-xsum</a> by default), deploys it to AWS Sagemaker, and queries it for inference. I made this tool utilizing Python, Bash, and a cool program named <a href="https://bashly.dannyb.co/">Bashly</a> to help me develop the CLI arguments and flags. In the future, I'd like to add more functionality to use custom models and send multiple queries at once for longer texts.</p>
-<p><a href="https://github.com/nogibjj/Summarize-CLI">Link to the project</a></p>
+<p><a href="https://github.com/abzdel/Summarize-CLI">Link to the project</a></p>
 <p><strong>Demo:</strong></p>
 <iframe width="640" height="385"
 src="https://www.youtube.com/embed/tRXR8zne2Q0">
@@ -173,6 +190,21 @@ src="https://www.youtube.com/embed/tRXR8zne2Q0">
 <p><strong>Demo:</strong></p>
 <iframe width="640" height="385"
 src="https://www.youtube.com/embed/x3TN3ZFBzu8">
+</iframe>
+<br>
+<h2 id="serverless-machine-learning-model"><a class="header" href="#serverless-machine-learning-model">Serverless Machine Learning Model</a></h2>
+<p>A linear model used to classify breast cancer instances using UCI'S breast cancer diagnostic data set. Model is trained using AWS Sagemaker and invoked using Amazon API Gateway and an AWS Lambda function.</p>
+<p><a href="https://github.com/abzdel/Machine-Learning-Serverless">Link to the project</a></p>
+<iframe width="640" height="385"
+src="https://www.youtube.com/embed/8fJlxViFTqs">
+</iframe>
+<br>
+<h2 id="azure-databricks-cluster-cli"><a class="header" href="#azure-databricks-cluster-cli">Azure Databricks Cluster CLI</a></h2>
+<p>CLI built in Rust and Bash that allows you to provision custom clusters in Databricks using the Databricks REST API.</p>
+<p><a href="https://github.com/abzdel/databricks-cluster-cli">Link to the project</a></p>
+<p><strong>Demo:</strong></p>
+<iframe width="640" height="385"
+src="https://www.youtube.com/embed/d8yQWnPbCHI">
 </iframe>
 <br>
 <h2 id="machine-learning-api"><a class="header" href="#machine-learning-api">Machine Learning API</a></h2>
@@ -205,6 +237,22 @@ src="https://www.youtube.com/embed/RRpDN-AFYsE">
 </ul>
 <p>Additionally, I worked on various ad-hoc requests and foundational analytics projects. The main analytics project I worked on during my first summer with the Clippers was in regards to <strong>developing a new ticketing model</strong> for the Intuit Dome - the Clippers' new stadium opening in Inglewood for the 2024-25 NBA Season. My team and I proposed a <em>subscription-based</em> ticketing model that would aim to improve the fan experience and reach a wider target market than we previously had been.</p>
 <p>I'm proud to say that the subscription-based model will be implemented for the Clippers' first season in the Intuit Dome! By targeting a specific demographic and opening up this opportunity for fans to attend games, we hope to see an increase in Clipper spirit as well as a $1-2 million increase during the first year of implementation.</p></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="rust-miniprojects"><a class="header" href="#rust-miniprojects">Rust Miniprojects</a></h1>
+<p>Rust is an emerging language that offers extremely fast speed and makes it easy to write safe and performant code. One of my goals when finishing up my MS program was to make a <em><a href="https://github.com/abzdel/rust_miniprojects">variety of Rust miniprojects</a></em> to give myself a solid foundation in the language.</p>
+<p>As a machine learning enthusiast, I've been very interested in the speed that Rust is able to offer in the context of ML training. One of my focuses in these miniprojects was to build out <em>mini machine learning solutions</em> for a variety of applications. Here are a handful of them:</p>
+<ul>
+<li><a href="https://github.com/abzdel/rust_miniprojects/tree/main/generate_text">A program that generates text based on User input</a></li>
+<li><a href="https://github.com/abzdel/rust_miniprojects/tree/main/rust_automl_with_docker">An containerized AutoML program that gives info on the best potential models for your data</a></li>
+<li><a href="https://github.com/abzdel/rust_miniprojects/tree/main/rust-bert-example">A question answering program using BERT</a></li>
+<li><a href="https://github.com/abzdel/Hugging_Face_Model_Downloader">Hugging Face Model Downloader to ONNX</a></li>
+</ul>
+<p>One of my other goals was to build out <strong>mini cloud based solutions</strong>. A good example is my <a href="https://github.com/abzdel/rust_miniprojects/tree/main/rust-lambda-handshake">Rust - AWS Lambda Handshake Program</a>, which is useful because cold starts are much faster in Rust as compared to other languages - and thus incur less cost over time.</p>
+<p>Some other examples of Rust cloud solutions I've made are:</p>
+<ul>
+<li><a href="https://github.com/abzdel/rust_miniprojects/tree/main/rust-azure-function">Rust Azure Function</a></li>
+<li><a href="https://github.com/abzdel/rust_miniprojects/tree/main/rust_s3">Rust program that sends files to AWS S3</a></li>
+</ul>
+<p>While my main language is Python, I've found Rust has taken over as my main language when I need something to run very fast, replacing my previous favorite C++. It's <em>much</em> more fun to write code in Rust and the compiler is so strict that it's actually quite difficult to write code that doesn't work. I believe Rust will gain a lot of traction in the coming years in the field of DS/ML.</p>
 
                     </main>
 

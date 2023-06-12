@@ -103,4 +103,4 @@ For my image & video processing course at Duke, my teammates and I used multi-Ot
 ## Estimating the Impact of Opioid Control Policies
 Along with a small group, I analyzed opioid-related policies across various states to determine whether they had an impact on both the prescription rates and overdose rates of opioids. This project includes a [PowerPoint presentation](https://github.com/abzdel/Opioid-Analysis/blob/main/30_results/Presentation_Opioid%20Control.pptx) going over our findings in a more succinct way.
 
-[Link to the project](https://github.com/abzdel/Opioid-Analysis)
+[Link to the project](https://github.com/abzdel/Opioid-Analysis) 
